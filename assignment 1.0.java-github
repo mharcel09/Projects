@@ -1,0 +1,61 @@
+	import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+	Scanner scan = new Scanner (System.in);
+	
+	String username = "Mharcel";
+	int password = 111;
+	
+	System.out.print("Enter Username: ");
+	String typeUsername = scan.nextLine();
+
+	if (typeUsername.equals(username)){
+	System.out.print("Enter Password: ");
+	int typePassword = scan.nextInt();
+	
+	if (typePassword == password){
+	int operator;
+int number1,number2, result;
+
+System.out.println("CALCULATOR");
+Scanner input =new Scanner(System.in);
+
+System.out.println ("Choose an Operator: +,-,* or /");
+operator = input.next().charAt(0);
+
+System.out.print ("Enter num1="); 
+	number1 = input.nextInt();
+System.out.print ("Enter num2=");
+	number2 = input.nextInt();
+
+switch (operator){
+	case '+':
+		result = number1 + number2;
+		System.out.println (number1+ " + "+number2+" = " +result);
+		break;
+	case '-':
+		result = number1 - number2;
+		System.out.println (number1+ " - "+number2+" = " +result);
+		break;
+	case '*':
+		result = number1 * number2;
+		System.out.println (number1+ " * "+number2+" = " +result);
+		break;
+	case '/':
+		result = number1 / number2;
+		System.out.println (number1+ " / "+number2+" = " +result);
+		break;
+
+		default:
+			System.out.println("Invalid operator.");
+}
+	} else  {
+			System.out.println("Wrong password.");
+}
+
+	} else {
+			System.out.println("Username not found.");
+}
+	}	
+	}
